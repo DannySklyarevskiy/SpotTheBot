@@ -1,0 +1,13 @@
+{
+  "name": "api curl request test",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "manifest_version": 3,  
+  "host_permissions": [
+    "http://www.randomnumberapi.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "thinky_monkey.png"
+  }
+}
