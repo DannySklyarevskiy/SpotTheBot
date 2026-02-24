@@ -1,13 +1,23 @@
 {
-  "name": "api curl request test",
-  "description": "Base Level Extension",
+  "manifest_version": 3,
+  "name": "Spot the Bot",
   "version": "1.0",
-  "manifest_version": 3,  
-  "host_permissions": [
-    "http://www.randomnumberapi.com/*"
+  "description": "Add random number buttons to tweets",
+  "permissions": [
+    "activeTab"
   ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": "thinky_monkey.png"
-  }
+  "host_permissions": [
+    "http://www.randomnumberapi.com/*",
+    "https://www.randomnumberapi.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
 }
