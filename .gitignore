@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# local dataset
+model/bot_detection_data.csv
+
+# BERT training artifacts (adjust path if needed)
+ml/bert_v1/model/
+ml/bert_v1/checkpoints/
+model/ml/bert_v1/model/
+model/ml/bert_v1/checkpoints/
+
+# large model files
+*.safetensors
+*.bin
